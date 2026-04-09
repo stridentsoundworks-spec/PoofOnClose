@@ -141,6 +141,13 @@ MIT — see [LICENSE](LICENSE).
 
 ---
 
+## Contributors
+
+- **Theodore Harvey** — design, development, and maintenance
+- **Weave** ([Perplexity Computer](https://perplexity.ai)) — security audit, CI/CD hardening, and collaborative development
+
+---
+
 ## Acknowledgements
 
 Inspired by the original macOS "poof" drag-to-trash animation that shipped from Mac OS X 10.0 through macOS Sierra (10.12).

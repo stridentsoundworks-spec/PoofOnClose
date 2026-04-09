@@ -2,6 +2,15 @@
 
 All notable changes to PoofOnClose are documented here.
 
+## [2.1.1] — 2026-04-09
+
+### Security
+- **GitHub Actions pinned to commit SHAs** — `actions/checkout` and `actions/upload-artifact` now reference immutable commit hashes instead of mutable version tags, mitigating supply chain attacks.
+- **Least-privilege CI permissions** — workflow token scoped to `contents: read` and `actions: write` only.
+- **Branch protection enabled** — `main` now requires the `build` status check to pass; force pushes and branch deletion are blocked.
+
+_Security audit and hardening by Weave (Perplexity Computer)._
+
 ## [2.1.0] — 2026-03-22
 
 ### Fixed
