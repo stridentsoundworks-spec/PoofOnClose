@@ -1,0 +1,19 @@
+# Build output
+build/
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Xcode (if someone opens in Xcode later)
+*.xcodeproj/
+xcuserdata/
+DerivedData/
+*.moved-aside
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+
+# Custom sound (keep out of repo — add your own)
+src/poof.aiff

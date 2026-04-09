@@ -1,0 +1,36 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: macos-14   # Apple Silicon runner (M1)
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode.app
+
+      - name: Build
+        run: |
+          chmod +x build.sh
+          ./build.sh
+
+      - name: Verify bundle
+        run: |
+          test -f build/PoofOnClose.app/Contents/MacOS/PoofOnClose
+          test -f build/PoofOnClose.app/Contents/Info.plist
+          echo "✅ Bundle looks good"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: PoofOnClose-${{ github.sha }}
+          path: build/PoofOnClose.app
+          retention-days: 7

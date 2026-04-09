@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleExecutable</key>
+    <string>PoofOnClose</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.theo.poofonclose</string>
+    <key>CFBundleName</key>
+    <string>PoofOnClose</string>
+    <key>CFBundleVersion</key>
+    <string>2.1</string>
+    <key>CFBundleShortVersionString</key>
+    <string>2.1</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <!-- Accessory app — no Dock icon -->
+    <key>LSUIElement</key>
+    <true/>
+    <!--
+        NOTE: Launch at Login (SMAppService) requires:
+          1. A Developer ID-signed build
+          2. The .app installed in /Applications
+        Ad hoc builds from build.sh will not satisfy requirement 1.
+        The feature is hidden at runtime on macOS < 13.
+    -->
+</dict>
+</plist>
